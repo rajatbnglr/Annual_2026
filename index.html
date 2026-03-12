@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Annual Day Program 2025 - 2026</title>
     <link rel="stylesheet" href="styles.css">
-    
+
     <meta property="og:title" content="Annual Day Program 2026">
     <meta property="og:description" content="Siddharth Village School Annual Day Web App">
     <meta property="og:image" content="https://rajatbnglr.github.io/Annual_2026/banner.jpg">
@@ -15,114 +15,149 @@
 </head>
 
 <body>
-    <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">
-                <img src="./Design_6.jpg" width="30" height="30" class="d-inline-block align-top logo" alt="logo">
-            </a>
-        </nav>
 
-        <h1>SVIS-PRITHIVIYUM SHANTHI- 2025 - 2026</h1>
-        <!-- Image and text -->
+<div class="container">
 
-        <ul>
-            <li onclick="setTrack(0)">1. Prayer Song</li>
-            <li onclick="setTrack(1)">2. Lamp lighting Shubham gurudhvam</li>
-            <li onclick="setTrack(2)">3. Welcome Address</li>
-            <li onclick="setTrack(3)">4. Annual Report</li>
-            <li onclick="setTrack(4)">5.WELCOME DANCE</li>
-            <li onclick="setTrack(5)">6.LKG UKG FASHIONSHOW</li>
-             <li onclick="setTrack(6)">6.1 LKGUKG FASHIONSHOW</li>
-            <li onclick="setTrack(7)">6.2 LKGUKG MINNALE</li>
-            <li onclick="setTrack(8)">6.3 LKGUKG Rachagan</li>
-            <li onclick="setTrack(9)">6.4 Save the Planet</li>
-            <li onclick="setTrack(10)">7.CLASS-1-DANCE</li>
-            <li onclick="setTrack(11)">8.CLASS-2-DANCE</li>
-            <li onclick="setTrack(12)">9.CLASS_7ENGLISHSKIT</li>
-            <li onclick="setTrack(13)">10.CLASS-3-DANCE</li>
-            <li onclick="setTrack(14)">11.CLASS-4-DANCE</li>
-            <li onclick="setTrack(15)">12.MAHAVATAR_NARASIMHA(9)</li>
-            <li onclick="setTrack(16)">13.CLASS-5-DANCE</li>
-            <li onclick="setTrack(17)">14.CLASS-6-DANCE</li>
-            <li onclick="setTrack(18)">14.1 SILAMBAM</li>
-            <li onclick="setTrack(19)">15.CLASS_9_DANCEDRAMA</li>
-            <li onclick="setTrack(20)">16.CLASS-7-DANCE</li>
-            <li onclick="setTrack(21)">17.CLASS-8</li>
-            <li onclick="setTrack(22)">18.CLASS9_FINALE</li>
-            <li onclick="setTrack(23)">19. Vote of Thanks</li>
-            <li onclick="setTrack(24)">20. National Anthem</li>
-        </ul>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<a class="navbar-brand" href="#">
+<img src="./Design_6.jpg" width="30" height="30" class="d-inline-block align-top logo" alt="logo">
+</a>
+</nav>
 
-        <div class="controls">
-            <button class="btn btn-primary" onclick="prevTrack()">Previous</button>
-            <audio id="mediaPlayer" controls></audio>
-            <button class="btn btn-primary" onclick="nextTrack()">Next</button>
-        </div>
+<h1>SVIS-PRITHIVIYUM SHANTHI- 2025 - 2026</h1>
 
-        <div class="marquee-container">
-            <marquee id="trackMarquee" behavior="scroll" direction="left"></marquee>
-        </div>
+<ul>
+<li onclick="setTrack(0)">1. Prayer Song</li>
+<li onclick="setTrack(1)">2. Lamp lighting Shubham gurudhvam</li>
+<li onclick="setTrack(2)">3. Welcome Address</li>
+<li onclick="setTrack(3)">4. Annual Report</li>
+<li onclick="setTrack(4)">5.WELCOME DANCE</li>
+<li onclick="setTrack(5)">6.LKG UKG FASHIONSHOW</li>
+<li onclick="setTrack(6)">6.1 LKGUKG FASHIONSHOW</li>
+<li onclick="setTrack(7)">6.2 LKGUKG MINNALE</li>
+<li onclick="setTrack(8)">6.3 LKGUKG Rachagan</li>
+<li onclick="setTrack(9)">6.4 Save the Planet</li>
+<li onclick="setTrack(10)">7.CLASS-1-DANCE</li>
+<li onclick="setTrack(11)">8.CLASS-2-DANCE</li>
+<li onclick="setTrack(12)">9.CLASS_7ENGLISHSKIT</li>
+<li onclick="setTrack(13)">10.CLASS-3-DANCE</li>
+<li onclick="setTrack(14)">11.CLASS-4-DANCE</li>
+<li onclick="setTrack(15)">12.MAHAVATAR_NARASIMHA(9)</li>
+<li onclick="setTrack(16)">13.CLASS-5-DANCE</li>
+<li onclick="setTrack(17)">14.CLASS-6-DANCE</li>
+<li onclick="setTrack(18)">14.1 SILAMBAM</li>
+<li onclick="setTrack(19)">15.CLASS_9_DANCEDRAMA</li>
+<li onclick="setTrack(20)">16.CLASS-7-DANCE</li>
+<li onclick="setTrack(21)">17.CLASS-8</li>
+<li onclick="setTrack(22)">18.CLASS9_FINALE</li>
+<li onclick="setTrack(23)">19. Vote of Thanks</li>
+<li onclick="setTrack(24)">20. National Anthem</li>
+</ul>
 
-    </div>
-    </div>
+<div class="controls">
+<button onclick="prevTrack()">Previous</button>
+<audio id="mediaPlayer" controls></audio>
+<button onclick="nextTrack()">Next</button>
+</div>
 
-    <script>
-        const tracks = [
-            '1.Prayer_Song_Guru_Paduka.mp3',
-            '2.Shubham-gurutvam.mp3',
-            '3.welcome-address.mp3',
-            '4.annual-report.mp3',
-            '5.WELCOMEDANCE.mp3',
-            '6.0LKGUKG_FASHIONSHOW.mp3',
-            '6.1.mp3',
-            '6.2.mp3',
-            '6.3.mp3',
-            '6.4.mp3',
-            '7.CLASS-1-DANCE.mp3',
-            '8.CLASS-2-DANCE.mp3',
-            '9.CLASS_7ENGLISHSKIT.mp3',
-            '10.CLASS-3-DANCE.mp3',
-            '11.CLASS_4DANCE.mp3',
-            '12.MAHAVATAR_NARASIMHA.mp3',
-            '13.CLASS-5-DANCE.mp3',
-            '14.0CLASS-6-DANCE.mp3',
-            '14.1SILAMBAM.mp3',
-            '15.CLASS_9_DANCEDRAMA.mp3',
-            '16.CLASS-7-DANCE.mp3',
-            '17.CLASS-8.mp3',
-            '18.class9.mp3',
-            '19.vote-of-thanks.mp3',
-            '20.national-anthem.mp3'
-        ];
-        let currentTrackIndex = 0;
-        const mediaPlayer = document.getElementById('mediaPlayer');
-        const trackMarquee = document.getElementById('trackMarquee');
+<div class="marquee-container">
+<marquee id="trackMarquee"></marquee>
+</div>
 
-        function setTrack(index) {
-            if (index >= 0 && index < tracks.length) {
-                currentTrackIndex = index;
-                mediaPlayer.src = `./${tracks[currentTrackIndex].replace(/ /g, '-')}`;
-                mediaPlayer.play();
-                trackMarquee.textContent = `Now Playing: ${tracks[currentTrackIndex]}`;
-            }
-        }
+</div>
 
-        function prevTrack() {
-            if (currentTrackIndex > 0) {
-                setTrack(currentTrackIndex - 1);
-            } else {
-                setTrack(tracks.length - 1); // Loop to the last track
-            }
-        }
+<script>
 
-        function nextTrack() {
-            if (currentTrackIndex < tracks.length - 1) {
-                setTrack(currentTrackIndex + 1);
-            } else {
-                setTrack(0); // Loop back to the first track
-            }
-        }
-    </script>
+const tracks = [
+'1.Prayer_Song_Guru_Paduka.mp3',
+'2.Shubham-gurutvam.mp3',
+'3.welcome-address.mp3',
+'4.annual-report.mp3',
+'5.WELCOMEDANCE.mp3',
+'6.0LKGUKG_FASHIONSHOW.mp3',
+'6.1.mp3',
+'6.2.mp3',
+'6.3.mp3',
+'6.4.mp3',
+'7.CLASS-1-DANCE.mp3',
+'8.CLASS-2-DANCE.mp3',
+'9.CLASS_7ENGLISHSKIT.mp3',
+'10.CLASS-3-DANCE.mp3',
+'11.CLASS_4DANCE.mp3',
+'12.MAHAVATAR_NARASIMHA.mp3',
+'13.CLASS-5-DANCE.mp3',
+'14.0CLASS-6-DANCE.mp3',
+'14.1SILAMBAM.mp3',
+'15.CLASS_9_DANCEDRAMA.mp3',
+'16.CLASS-7-DANCE.mp3',
+'17.CLASS-8.mp3',
+'18.class9.mp3',
+'19.vote-of-thanks.mp3',
+'20.national-anthem.mp3'
+];
+
+let currentTrackIndex = -1;
+
+const mediaPlayer = document.getElementById('mediaPlayer');
+const trackMarquee = document.getElementById('trackMarquee');
+
+function setTrack(index) {
+
+if(index < 0 || index >= tracks.length) return;
+
+// If same track clicked → toggle play/pause
+if(currentTrackIndex === index){
+
+if(mediaPlayer.paused){
+mediaPlayer.play();
+trackMarquee.textContent = "Now Playing: " + tracks[index];
+}
+else{
+mediaPlayer.pause();
+trackMarquee.textContent = "Paused: " + tracks[index];
+}
+
+}
+else{
+
+currentTrackIndex = index;
+mediaPlayer.src = "./" + tracks[index];
+mediaPlayer.play();
+
+trackMarquee.textContent = "Now Playing: " + tracks[index];
+
+}
+
+}
+
+function prevTrack(){
+
+if(currentTrackIndex > 0){
+setTrack(currentTrackIndex - 1);
+}
+else{
+setTrack(tracks.length - 1);
+}
+
+}
+
+function nextTrack(){
+
+if(currentTrackIndex < tracks.length - 1){
+setTrack(currentTrackIndex + 1);
+}
+else{
+setTrack(0);
+}
+
+}
+
+// Auto play next track when song ends
+mediaPlayer.addEventListener("ended", function(){
+nextTrack();
+});
+
+</script>
+
 </body>
-
 </html>
